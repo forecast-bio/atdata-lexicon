@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@atproto/lex-cli": "^0.9.8"
+  }
+}
