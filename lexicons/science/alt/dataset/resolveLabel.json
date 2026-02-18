@@ -1,6 +1,6 @@
 {
   "lexicon": 1,
-  "id": "ac.foundation.dataset.resolveLabel",
+  "id": "science.alt.dataset.resolveLabel",
   "defs": {
     "main": {
       "type": "query",
@@ -47,7 +47,7 @@
             },
             "label": {
               "type": "ref",
-              "ref": "ac.foundation.dataset.label#main",
+              "ref": "science.alt.dataset.label#main",
               "description": "The label record that was resolved"
             }
           }
