@@ -15,4 +15,4 @@ jobs:
           node-version: 20
       - run: npm install
       - name: Validate lexicon schemas
-        run: npx lex gen-api --yes /tmp/validate-output ./lexicons/ac/foundation/dataset/*.json
+        run: npx lex gen-api --yes /tmp/validate-output ./lexicons/science/alt/dataset/*.json

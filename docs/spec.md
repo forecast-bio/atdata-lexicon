@@ -6,33 +6,33 @@
 
 | NSID | Key | Description |
 |------|-----|-------------|
-| `ac.foundation.dataset.record` | `tid` | Dataset index record with storage refs, metadata, and sample schema reference |
-| `ac.foundation.dataset.schema` | `any` | Versioned sample type definition (JSON Schema Draft 7, extensible to other formats) |
-| `ac.foundation.dataset.lens` | `tid` | Bidirectional schema transformation with code references |
-| `ac.foundation.dataset.label` | `tid` | Named label pointing to a dataset record (enables versioned aliases) |
+| `science.alt.dataset.record` | `tid` | Dataset index record with storage refs, metadata, and sample schema reference |
+| `science.alt.dataset.schema` | `any` | Versioned sample type definition (JSON Schema Draft 7, extensible to other formats) |
+| `science.alt.dataset.lens` | `tid` | Bidirectional schema transformation with code references |
+| `science.alt.dataset.label` | `tid` | Named label pointing to a dataset record (enables versioned aliases) |
 
 ### Queries (XRPC)
 
 | NSID | Description |
 |------|-------------|
-| `ac.foundation.dataset.resolveSchema` | Resolve a schema by NSID, optionally at a specific version |
-| `ac.foundation.dataset.resolveLabel` | Resolve a named label to its underlying dataset record |
+| `science.alt.dataset.resolveSchema` | Resolve a schema by NSID, optionally at a specific version |
+| `science.alt.dataset.resolveLabel` | Resolve a named label to its underlying dataset record |
 
 ### Tokens and extensible types
 
 | NSID | Description |
 |------|-------------|
-| `ac.foundation.dataset.schemaType` | Schema format identifiers (`jsonSchema`, extensible) |
-| `ac.foundation.dataset.arrayFormat` | Array serialization formats (`ndarrayBytes`, extensible) |
+| `science.alt.dataset.schemaType` | Schema format identifiers (`jsonSchema`, extensible) |
+| `science.alt.dataset.arrayFormat` | Array serialization formats (`ndarrayBytes`, extensible) |
 
 ### Storage objects (union members of `record.storage`)
 
 | NSID | Description |
 |------|-------------|
-| `ac.foundation.dataset.storageHttp` | HTTP/HTTPS URL-based storage with optional shard manifest |
-| `ac.foundation.dataset.storageS3` | S3-compatible object storage |
-| `ac.foundation.dataset.storageBlobs` | ATProto PDS blob storage |
-| `ac.foundation.dataset.storageExternal` | *(Deprecated)* External URL storage |
+| `science.alt.dataset.storageHttp` | HTTP/HTTPS URL-based storage with optional shard manifest |
+| `science.alt.dataset.storageS3` | S3-compatible object storage |
+| `science.alt.dataset.storageBlobs` | ATProto PDS blob storage |
+| `science.alt.dataset.storageExternal` | *(Deprecated)* External URL storage |
 
 ### Non-lexicon schemas
 
