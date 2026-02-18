@@ -1,6 +1,6 @@
 {
   "lexicon": 1,
-  "id": "ac.foundation.dataset.label",
+  "id": "science.alt.dataset.label",
   "defs": {
     "main": {
       "type": "record",
