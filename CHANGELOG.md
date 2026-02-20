@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.2.1b1] - 2026-02-20
+
+### Changed
+
+- **Breaking**: Renamed `science.alt.dataset.record` to `science.alt.dataset.entry` to avoid ambiguity with ATProto's "record" concept
+- Updated all cross-references (`#shardChecksum` refs in storage types) and documentation
+
 ## [0.2.0b1] - 2026-02-17
 
 ### Changed

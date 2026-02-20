@@ -10,7 +10,7 @@ Authoritative ATProto lexicon definitions for the `science.alt.dataset` namespac
 
 ## Conventions
 
-- Directory structure mirrors NSID: `science.alt.dataset.record` -> `lexicons/science/alt/dataset/record.json`
+- Directory structure mirrors NSID: `science.alt.dataset.entry` -> `lexicons/science/alt/dataset/entry.json`
 - All lexicon files use `"lexicon": 1` and have an `"id"` matching their path-derived NSID
 
 ## Validation

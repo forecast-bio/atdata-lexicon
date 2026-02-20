@@ -52,7 +52,7 @@
         },
         "checksum": {
           "type": "ref",
-          "ref": "science.alt.dataset.record#shardChecksum",
+          "ref": "science.alt.dataset.entry#shardChecksum",
           "description": "Content hash for integrity verification"
         }
       }
