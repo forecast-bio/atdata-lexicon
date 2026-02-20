@@ -6,17 +6,17 @@
 
 | NSID | Key | Description |
 |------|-----|-------------|
-| `science.alt.dataset.record` | `tid` | Dataset index record with storage refs, metadata, and sample schema reference |
+| `science.alt.dataset.entry` | `tid` | Dataset index entry with storage refs, metadata, and sample schema reference |
 | `science.alt.dataset.schema` | `any` | Versioned sample type definition (JSON Schema Draft 7, extensible to other formats) |
 | `science.alt.dataset.lens` | `tid` | Bidirectional schema transformation with code references |
-| `science.alt.dataset.label` | `tid` | Named label pointing to a dataset record (enables versioned aliases) |
+| `science.alt.dataset.label` | `tid` | Named label pointing to a dataset entry (enables versioned aliases) |
 
 ### Queries (XRPC)
 
 | NSID | Description |
 |------|-------------|
 | `science.alt.dataset.resolveSchema` | Resolve a schema by NSID, optionally at a specific version |
-| `science.alt.dataset.resolveLabel` | Resolve a named label to its underlying dataset record |
+| `science.alt.dataset.resolveLabel` | Resolve a named label to its underlying dataset entry |
 
 ### Tokens and extensible types
 
@@ -25,7 +25,7 @@
 | `science.alt.dataset.schemaType` | Schema format identifiers (`jsonSchema`, extensible) |
 | `science.alt.dataset.arrayFormat` | Array serialization formats (`ndarrayBytes`, extensible) |
 
-### Storage objects (union members of `record.storage`)
+### Storage objects (union members of `entry.storage`)
 
 | NSID | Description |
 |------|-------------|
@@ -43,19 +43,19 @@
 ## Record relationships
 
 ```
-schema  <----  record  ---->  storage{Http,S3,Blobs}
-  ^            (schemaRef)       (union)
+schema  <----  entry  ---->  storage{Http,S3,Blobs}
+  ^            (schemaRef)      (union)
   |
   |--- lens (sourceSchema, targetSchema)
 
-label  ---->  record
+label  ---->  entry
        (datasetUri)
 ```
 
-- A **record** references a **schema** via `schemaRef` (AT-URI) and contains a **storage** union
+- An **entry** references a **schema** via `schemaRef` (AT-URI) and contains a **storage** union
 - A **lens** connects two **schemas** with bidirectional transformation code
-- A **label** is a named pointer to a **record**, enabling versioned aliases like `mnist@1.0.0`
-- **Storage objects** share the `shardChecksum` type defined in `record#shardChecksum`
+- A **label** is a named pointer to an **entry**, enabling versioned aliases like `mnist@1.0.0`
+- **Storage objects** share the `shardChecksum` type defined in `entry#shardChecksum`
 
 ## Versioning policy
 
