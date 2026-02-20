@@ -15,7 +15,7 @@ lexicons/
   science/
     alt/
       dataset/
-        record.json          # science.alt.dataset.record
+        entry.json           # science.alt.dataset.entry
         schema.json          # science.alt.dataset.schema
         ...
 schemas/
@@ -37,7 +37,7 @@ npx @atproto/lex-cli gen-api ./src/client ./lexicons/science/alt/dataset/*.json
 **Python** (via [atdata](https://github.com/forecast-bio/atdata)):
 ```python
 from atdata.lexicons import load_lexicon
-schema = load_lexicon("science.alt.dataset.record")
+schema = load_lexicon("science.alt.dataset.entry")
 ```
 
 ## Validation
