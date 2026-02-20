@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.2.1b1] - 2026-02-20
+
+### Changed
+
+- **Breaking**: Renamed `science.alt.dataset.record` to `science.alt.dataset.entry` to avoid ambiguity with ATProto's "record" concept
+- Updated all cross-references (`#shardChecksum` refs in storage types) and documentation
+
+## [0.2.0b1] - 2026-02-17
+
+### Changed
+
+- **Breaking**: Renamed entire lexicon namespace from `ac.foundation.dataset.*` to `science.alt.dataset.*`
+- Moved directory structure from `lexicons/ac/foundation/dataset/` to `lexicons/science/alt/dataset/`
+- Updated all internal cross-references, documentation, CI workflow, and publish script
+
 ## [0.1.0b1] - 2026-02-17
 
 ### Added
