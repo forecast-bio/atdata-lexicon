@@ -13,6 +13,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - Optional `sourceSchemaVersion` and `targetSchemaVersion` fields on `science.alt.dataset.lens` for semver-based schema compatibility matching
 - Trust model documentation in `docs/spec.md`
 
+### Fixed
+
+- `resolveLabel.json` missing `LabelNotFound` error definition (inconsistent with `resolveSchema`'s `SchemaNotFound`)
+- `resolveLabel.json` redundant `#main` suffix on label ref (ATProto convention: bare NSID for main definitions)
+
 ## [0.2.2b1] - 2026-02-23
 
 ### Added
