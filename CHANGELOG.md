@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+### Added
+
+- GitHub Actions workflow for automated lexicon publishing to ATProto PDS on release
+
 ## [0.3.0b1] - 2026-02-24
 
 ### Added

@@ -25,6 +25,7 @@
 |------|-------------|
 | `science.alt.dataset.schemaType` | Schema format identifiers (`jsonSchema`, extensible) |
 | `science.alt.dataset.arrayFormat` | Array serialization formats (`ndarrayBytes`, extensible) |
+| `science.alt.dataset.programmingLanguage` | Programming language identifiers (`python`, `typescript`, `javascript`, `rust`, extensible) |
 | `science.alt.dataset.verificationMethod` | Verification method identifiers (`codeReview`, `formalProof`, `signedHash`, `automatedTest`, extensible) |
 
 ### Storage objects (union members of `entry.storage`)
@@ -84,4 +85,5 @@ These lexicons follow ATProto evolution conventions:
 - **Additive changes only**: new optional fields, new `knownValues` entries, new union members
 - **No breaking changes**: required fields are never removed, types are never narrowed
 - **Open unions**: storage and schema format unions are open by default, allowing new members without breaking existing consumers
-- **Token extensibility**: `schemaType` and `arrayFormat` use `knownValues` (not `enum`), so new formats can be added without schema changes
+- **Token extensibility**: `schemaType`, `arrayFormat`, and `programmingLanguage` use `knownValues` (not `enum`), so new values can be added without schema changes
+- **Deprecated fields**: The top-level `language` field on `science.alt.dataset.lens` is deprecated in favor of per-reference `codeReference.language`, which allows getter and putter to specify different languages
