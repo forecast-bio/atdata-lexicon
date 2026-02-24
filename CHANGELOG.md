@@ -4,11 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
-## [Unreleased]
+## [0.3.0b2] - 2026-02-24
 
 ### Added
 
-- GitHub Actions workflow for automated lexicon publishing to ATProto PDS on release
+- `science.alt.dataset.programmingLanguage` token type with extensible known values: `python`, `typescript`, `javascript`, `rust`
+- Optional `language` ref field on `#codeReference` in `science.alt.dataset.lens` for per-function language granularity
+- GitHub Actions workflow (`publish.yml`) for automated lexicon publishing to ATProto PDS on release
+- Publishing documentation section in README
+
+### Deprecated
+
+- Top-level `language` field on `science.alt.dataset.lens` record in favor of `codeReference.language`
 
 ## [0.3.0b1] - 2026-02-24
 
