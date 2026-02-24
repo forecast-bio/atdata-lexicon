@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+### Added
+
+- NSID-to-path validation script (`scripts/validate-nsids.sh`) and CI step to catch drift after namespace renames
+- Environment variable validation in `publish.sh` (fail fast if `GOAT_PDS_HOST`/`GOAT_AUTH` unset)
+
+### Fixed
+
+- `resolveLabel.json` query parameters now have `maxLength` constraints matching their record field counterparts (name: 200, version: 50)
+- Stale "Foundation.ac" reference in `schema.json` `arrayFormatVersions` description
+- `spec.md` incorrectly listed `storageExternal` as a member of `entry.storage` union; moved to new "Deprecated types" section
+- CI push trigger now includes `develop` branch
+
 ## [0.2.1b1] - 2026-02-20
 
 ### Changed

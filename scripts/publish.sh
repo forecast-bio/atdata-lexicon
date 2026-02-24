@@ -18,6 +18,11 @@ if ! command -v goat &> /dev/null; then
     exit 1
 fi
 
+if [ -z "${GOAT_PDS_HOST:-}" ] || [ -z "${GOAT_AUTH:-}" ]; then
+    echo "Error: GOAT_PDS_HOST and GOAT_AUTH environment variables must be set" >&2
+    exit 1
+fi
+
 for lexicon_file in "$LEXICON_DIR"/*.json; do
     nsid=$(basename "$lexicon_file" .json)
     full_nsid="science.alt.dataset.$nsid"
