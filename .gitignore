@@ -1,2 +1,9 @@
 node_modules/
 package-lock.json
+
+# Claude Code - local/machine-specific
+.claude/settings.local.json
+
+# Chainlink - runtime state
+.chainlink/issues.db
+.chainlink/.cache/

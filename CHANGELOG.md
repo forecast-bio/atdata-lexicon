@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.3.0b1] - 2026-02-24
+
+### Added
+
+- `science.alt.dataset.lensVerification` record type for attesting to the correctness of a lens at a specific version, following the Bluesky verification pattern
+- `science.alt.dataset.verificationMethod` token type with extensible known values: `codeReview`, `formalProof`, `signedHash`, `automatedTest`
+- Optional `sourceSchemaVersion` and `targetSchemaVersion` fields on `science.alt.dataset.lens` for semver-based schema compatibility matching
+- Trust model documentation in `docs/spec.md`
+
+### Fixed
+
+- `resolveLabel.json` missing `LabelNotFound` error definition (inconsistent with `resolveSchema`'s `SchemaNotFound`)
+- `resolveLabel.json` redundant `#main` suffix on label ref (ATProto convention: bare NSID for main definitions)
+
 ## [0.2.2b1] - 2026-02-23
 
 ### Added

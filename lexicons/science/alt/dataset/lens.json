@@ -59,6 +59,16 @@
             "ref": "#lensMetadata",
             "description": "Arbitrary metadata (author, performance notes, etc.)"
           },
+          "sourceSchemaVersion": {
+            "type": "string",
+            "description": "Semver version or range for source schema compatibility (e.g., '1.0.0', '>=1.0.0 <2.0.0')",
+            "maxLength": 100
+          },
+          "targetSchemaVersion": {
+            "type": "string",
+            "description": "Semver version or range for target schema compatibility (e.g., '1.0.0', '>=1.0.0 <2.0.0')",
+            "maxLength": 100
+          },
           "createdAt": {
             "type": "string",
             "format": "datetime",
