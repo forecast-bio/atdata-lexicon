@@ -49,12 +49,18 @@
             },
             "label": {
               "type": "ref",
-              "ref": "science.alt.dataset.label#main",
+              "ref": "science.alt.dataset.label",
               "description": "The label record that was resolved"
             }
           }
         }
-      }
+      },
+      "errors": [
+        {
+          "name": "LabelNotFound",
+          "description": "No label found with the given name"
+        }
+      ]
     }
   }
 }
