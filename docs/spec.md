@@ -29,10 +29,15 @@
 
 | NSID | Description |
 |------|-------------|
-| `science.alt.dataset.storageHttp` | HTTP/HTTPS URL-based storage with optional shard manifest |
+| `science.alt.dataset.storageHttp` | HTTP/HTTPS URL-based storage with shard manifest |
 | `science.alt.dataset.storageS3` | S3-compatible object storage |
 | `science.alt.dataset.storageBlobs` | ATProto PDS blob storage |
-| `science.alt.dataset.storageExternal` | *(Deprecated)* External URL storage |
+
+### Deprecated types
+
+| NSID | Description |
+|------|-------------|
+| `science.alt.dataset.storageExternal` | *(Deprecated)* External URL storage; use `storageHttp` or `storageS3` instead. Not included in `entry.storage` union refs. |
 
 ### Non-lexicon schemas
 

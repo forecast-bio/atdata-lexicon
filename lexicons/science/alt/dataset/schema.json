@@ -106,7 +106,7 @@
         },
         "arrayFormatVersions": {
           "type": "unknown",
-          "description": "Mapping from array format identifiers to semantic versions. Keys are science.alt.dataset.arrayFormat values (e.g., 'ndarrayBytes'), values are semver strings (e.g., '1.0.0'). Foundation.ac maintains canonical shim schemas at https://alt.science/schemas/atdata-{format}-bytes/{version}/."
+          "description": "Mapping from array format identifiers to semantic versions. Keys are science.alt.dataset.arrayFormat values (e.g., 'ndarrayBytes'), values are semver strings (e.g., '1.0.0'). Canonical shim schemas are maintained at https://alt.science/schemas/atdata-{format}-bytes/{version}/."
         }
       }
     }
