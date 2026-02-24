@@ -51,7 +51,7 @@
           },
           "language": {
             "type": "string",
-            "description": "Programming language of the lens implementation (e.g., 'python', 'typescript')",
+            "description": "(Deprecated: use codeReference.language instead.) Programming language of the lens implementation (e.g., 'python', 'typescript')",
             "maxLength": 50
           },
           "metadata": {
@@ -110,6 +110,11 @@
           "type": "string",
           "description": "Optional branch name (for reference, commit hash is authoritative)",
           "maxLength": 100
+        },
+        "language": {
+          "type": "ref",
+          "ref": "science.alt.dataset.programmingLanguage",
+          "description": "Programming language of the code at this reference. Prefer this over the top-level language field for per-function granularity."
         }
       }
     }
