@@ -4,6 +4,9 @@ package-lock.json
 # Claude Code - local/machine-specific
 .claude/settings.local.json
 
+# Git worktrees (feature branches)
+.worktrees/
+
 # Chainlink - runtime state
 .chainlink/issues.db
 .chainlink/.cache/
