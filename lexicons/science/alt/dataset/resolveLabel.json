@@ -18,11 +18,13 @@
           },
           "name": {
             "type": "string",
-            "description": "Label name, e.g. 'mnist'"
+            "description": "Label name, e.g. 'mnist'",
+            "maxLength": 200
           },
           "version": {
             "type": "string",
-            "description": "Specific version to resolve. If omitted, resolves to latest."
+            "description": "Specific version to resolve. If omitted, resolves to latest.",
+            "maxLength": 50
           }
         }
       },
