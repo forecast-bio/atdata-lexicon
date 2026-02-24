@@ -10,6 +10,7 @@
 | `science.alt.dataset.schema` | `any` | Versioned sample type definition (JSON Schema Draft 7, extensible to other formats) |
 | `science.alt.dataset.lens` | `tid` | Bidirectional schema transformation with code references |
 | `science.alt.dataset.label` | `tid` | Named label pointing to a dataset entry (enables versioned aliases) |
+| `science.alt.dataset.lensVerification` | `tid` | Verification record for a lens transformation, written by the verifier |
 
 ### Queries (XRPC)
 
@@ -24,6 +25,7 @@
 |------|-------------|
 | `science.alt.dataset.schemaType` | Schema format identifiers (`jsonSchema`, extensible) |
 | `science.alt.dataset.arrayFormat` | Array serialization formats (`ndarrayBytes`, extensible) |
+| `science.alt.dataset.verificationMethod` | Verification method identifiers (`codeReview`, `formalProof`, `signedHash`, `automatedTest`, extensible) |
 
 ### Storage objects (union members of `entry.storage`)
 
@@ -52,6 +54,8 @@ schema  <----  entry  ---->  storage{Http,S3,Blobs}
   ^            (schemaRef)      (union)
   |
   |--- lens (sourceSchema, targetSchema)
+        ^
+        |--- lensVerification (lens, verificationMethod)
 
 label  ---->  entry
        (datasetUri)
@@ -59,8 +63,19 @@ label  ---->  entry
 
 - An **entry** references a **schema** via `schemaRef` (AT-URI) and contains a **storage** union
 - A **lens** connects two **schemas** with bidirectional transformation code
+- A **lensVerification** attests to the correctness of a **lens** at a specific version (`lensCommit`)
 - A **label** is a named pointer to an **entry**, enabling versioned aliases like `mnist@1.0.0`
 - **Storage objects** share the `shardChecksum` type defined in `entry#shardChecksum`
+
+## Trust model
+
+Lens verification follows the pattern established by Bluesky's `app.bsky.graph.verification`: the **verifier** writes a `lensVerification` record into their own PDS. The verifier's identity is implicit — it is the DID of the repo owner. This follows the ATProto golden rule: you can only write records into your own repo.
+
+Key properties:
+
+- **Version-pinned**: Each verification targets a specific lens record version via `lensCommit` (CID). If the lens is updated, existing verifications do not carry over — the new version must be re-verified.
+- **Method-tagged**: The `verificationMethod` field declares what kind of verification was performed (code review, formal proof, signed hash, or automated test).
+- **Trusted verifier designation is an AppView concern**: The lexicon does not define who is a "trusted" verifier. That policy lives at the application layer, where an AppView can maintain a list of trusted DIDs and surface verification status accordingly.
 
 ## Versioning policy
 
