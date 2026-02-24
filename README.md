@@ -49,6 +49,10 @@ npx lex gen-api --yes /tmp/validate-output ./lexicons/science/alt/dataset/*.json
 
 CI runs this on every push and pull request.
 
+## Publishing
+
+Lexicons are automatically published to the ATProto PDS when a GitHub release is created. For manual publishing, run `scripts/publish.sh` with `GOAT_PDS_HOST` and `GOAT_AUTH` environment variables set. See `scripts/publish.sh` for details.
+
 ## License
 
 [MIT](LICENSE)
