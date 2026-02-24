@@ -8,12 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
-- `science.alt.dataset.programmingLanguage` token type with extensible known values: `python`, `typescript`, `javascript`, `rust`
-- Optional `language` field on `science.alt.dataset.lens#codeReference` for per-function programming language granularity
-
-### Deprecated
-
-- Top-level `language` field on `science.alt.dataset.lens` records — use `codeReference.language` instead for per-function granularity
+- GitHub Actions workflow for automated lexicon publishing to ATProto PDS on release
 
 ## [0.3.0b1] - 2026-02-24
 
