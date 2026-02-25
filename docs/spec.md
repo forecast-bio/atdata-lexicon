@@ -24,7 +24,7 @@
 | NSID | Description |
 |------|-------------|
 | `science.alt.dataset.schemaType` | Schema format identifiers (`jsonSchema`, extensible) |
-| `science.alt.dataset.arrayFormat` | Array serialization formats (`ndarrayBytes`, extensible) |
+| `science.alt.dataset.arrayFormat` | Array serialization formats (`ndarrayBytes`, `sparseBytes`, `structuredBytes`, `arrowTensor`, `safetensors`, extensible) |
 | `science.alt.dataset.programmingLanguage` | Programming language identifiers (`python`, `typescript`, `javascript`, `rust`, extensible) |
 | `science.alt.dataset.verificationMethod` | Verification method identifiers (`codeReview`, `formalProof`, `signedHash`, `automatedTest`, extensible) |
 
@@ -46,7 +46,13 @@
 
 | File | Description |
 |------|-------------|
-| `schemas/ndarray_shim.json` | JSON Schema Draft 7 definition for NDArray byte format (numpy `.npy` binary) |
+| `schemas/ndarray_shim.json` | JSON Schema Draft 7 definition for NDArray byte format v1.0.0 (numpy `.npy` binary) |
+| `schemas/ndarray_shim_v1.1.0.json` | NDArray byte format v1.1.0 with optional dtype, shape, and dimension name annotations |
+| `schemas/sparse_shim.json` | JSON Schema Draft 7 definition for scipy sparse matrix format (CSR/CSC/COO) |
+| `schemas/structured_shim.json` | JSON Schema Draft 7 definition for numpy structured array format (compound dtypes) |
+| `schemas/arrow_tensor_shim.json` | JSON Schema Draft 7 definition for Arrow tensor IPC format |
+| `schemas/safetensors_shim.json` | JSON Schema Draft 7 definition for HuggingFace safetensors format |
+| `schemas/dataframe_shim.json` | JSON Schema Draft 7 definition for tabular data in Parquet format |
 
 ## Record relationships
 

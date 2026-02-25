@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+### Added
+
+- New array format tokens: `sparseBytes`, `structuredBytes`, `arrowTensor`, `safetensors`
+- JSON Schema shim definitions for sparse, structured, arrow tensor, safetensors, and dataframe formats
+- NDArray shim v1.1.0 with optional dtype, shape, and dimension name annotations
+
 ## [0.3.0b3] - 2026-02-24
 
 ### Fixed
