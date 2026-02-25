@@ -22,6 +22,6 @@ jobs:
 
       - name: Publish lexicons to PDS
         env:
-          GOAT_PDS_HOST: ${{ secrets.GOAT_PDS_HOST }}
-          GOAT_AUTH: ${{ secrets.GOAT_AUTH }}
+          GOAT_USERNAME: ${{ secrets.GOAT_USERNAME }}
+          GOAT_PASSWORD: ${{ secrets.GOAT_PASSWORD }}
         run: ./scripts/publish.sh
