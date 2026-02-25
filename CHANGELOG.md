@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+
+- New array format tokens: `sparseBytes`, `structuredBytes`, `arrowTensor`, `safetensors`
+- JSON Schema shim definitions for sparse, structured, arrow tensor, safetensors, and dataframe formats
+- NDArray shim v1.1.0 with optional dtype, shape, and dimension name annotations
 ### Changed
 
 - Redesigned `#jsonSchemaFormat` as typed envelope with opaque `content` field to resolve ATProto `$type` conflict with goat CLI publishing
