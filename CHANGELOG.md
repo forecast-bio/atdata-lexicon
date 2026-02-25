@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+### Changed
+
+- Redesigned `#jsonSchemaFormat` as typed envelope with opaque `content` field to resolve ATProto `$type` conflict with goat CLI publishing
+
+### Fixed
+
+- `schema.json` can now be published via `goat lex publish` (removed explicit `$type` declaration that conflicted with ATProto reserved fields)
+
 ## [0.3.0b3] - 2026-02-24
 
 ### Fixed
