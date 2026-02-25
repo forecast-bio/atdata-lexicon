@@ -83,26 +83,17 @@
     },
     "jsonSchemaFormat": {
       "type": "object",
-      "description": "JSON Schema Draft 7 format for sample type definitions. Used with NDArray shim for array types.",
-      "required": ["$type", "$schema", "type", "properties"],
+      "description": "JSON Schema format for sample type definitions. The content field holds the actual JSON Schema document (Draft 7+). This envelope separates ATProto protocol fields from JSON Schema's $-prefixed fields.",
+      "required": ["draft", "content"],
       "properties": {
-        "$type": {
+        "draft": {
           "type": "string",
-          "const": "science.alt.dataset.schema#jsonSchemaFormat"
+          "const": "draft-07",
+          "description": "JSON Schema draft version identifier"
         },
-        "$schema": {
-          "type": "string",
-          "const": "http://json-schema.org/draft-07/schema#",
-          "description": "JSON Schema version identifier"
-        },
-        "type": {
-          "type": "string",
-          "const": "object",
-          "description": "Sample types must be objects"
-        },
-        "properties": {
+        "content": {
           "type": "unknown",
-          "description": "Field definitions for the sample type (JSON Schema properties object)"
+          "description": "JSON Schema object (e.g., Draft 7). Contains the full schema including $schema, type, properties, etc. Stored as opaque data to avoid $-prefix collisions with ATProto reserved fields."
         },
         "arrayFormatVersions": {
           "type": "unknown",
