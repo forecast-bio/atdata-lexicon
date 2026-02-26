@@ -53,6 +53,11 @@ CI runs this on every push and pull request.
 
 Lexicons are automatically published to the ATProto PDS when a GitHub release is created. For manual publishing, run `scripts/publish.sh` with `GOAT_USERNAME` and `GOAT_PASSWORD` environment variables set. See `scripts/publish.sh` for details.
 
+## Schema Hosting
+
+JSON Schema shim definitions are published to `https://json-schema.alt.science/` on each release.
+These define the serialization formats for array types (ndarray, sparse, arrow tensor, etc.).
+
 ## License
 
 [MIT](LICENSE)
