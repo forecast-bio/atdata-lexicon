@@ -1,0 +1,32 @@
+name: Deploy Schemas
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout tagged ref
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: which jq || sudo apt-get install -y jq
+
+      - name: Build schema site
+        run: ./scripts/build-schema-site.sh _site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://alt.science/schemas/atdata-sparse-bytes/1.0.0",
+  "$id": "https://json-schema.alt.science/atdata-sparse-bytes/1.0.0",
   "title": "ATDataSparseBytes",
   "description": "Standard definition for scipy sparse matrix types in JSON Schema, compatible with atdata WebDataset serialization. This type's contents are interpreted as containing the raw bytes data for a serialized scipy sparse matrix (CSR/CSC/COO), and serve as a marker for atdata-based code generation to use standard scipy sparse types, rather than generated dataclasses.",
   "version": "1.0.0",
