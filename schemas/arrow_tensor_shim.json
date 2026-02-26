@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://alt.science/schemas/atdata-arrow-tensor/1.0.0",
+  "$id": "https://json-schema.alt.science/atdata-arrow-tensor/1.0.0",
   "title": "ATDataArrowTensor",
   "description": "Standard definition for Arrow tensor types in JSON Schema, compatible with atdata WebDataset serialization. This type's contents are interpreted as containing the raw bytes data for a serialized Arrow tensor, and serve as a marker for atdata-based code generation to use standard Arrow tensor types, rather than generated dataclasses.",
   "version": "1.0.0",

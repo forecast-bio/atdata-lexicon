@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://alt.science/schemas/atdata-structured-bytes/1.0.0",
+  "$id": "https://json-schema.alt.science/atdata-structured-bytes/1.0.0",
   "title": "ATDataStructuredBytes",
   "description": "Standard definition for numpy structured array types in JSON Schema, compatible with atdata WebDataset serialization. This type's contents are interpreted as containing the raw bytes data for a serialized numpy structured array, and serve as a marker for atdata-based code generation to use standard numpy structured types, rather than generated dataclasses.",
   "version": "1.0.0",
