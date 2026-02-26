@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.4.1b1] - 2026-02-26
+
+### Added
+
+- GitHub Pages deployment workflow for JSON Schema shims at `json-schema.alt.science`
+- Build script (`scripts/build-schema-site.sh`) that derives output paths from each schema's `$id` field
+
+### Changed
+
+- JSON Schema shim `$id` URLs moved from `alt.science/schemas/` to `json-schema.alt.science/`
+
 ## [0.4.0b1] - 2026-02-25
 
 ### Added
