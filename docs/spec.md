@@ -73,6 +73,7 @@ label  ---->  entry
 - A **lensVerification** attests to the correctness of a **lens** at a specific version (`lensCommit`)
 - A **label** is a named pointer to an **entry**, enabling versioned aliases like `mnist@1.0.0`
 - **Storage objects** share the `shardChecksum` type defined in `entry#shardChecksum`
+- An **entry** may include `manifests` — per-shard blob references to a JSON header and optional Parquet samples file for query-based access (`entry#shardManifestRef`)
 
 ## Trust model
 
